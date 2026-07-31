@@ -1,191 +1,264 @@
-# ExpenseTracker Pro
+# 💰 ExpenseTracker Pro
 
-**Name:** [Your Full Name Here]
-**Bootcamp:** TechnerLab Bootcamp · MERN Stack + AI Engineering
-**Assignment:** Assignment 2 — Personal Expense Tracker (Node.js + Express + fs + React + Tailwind)
+> A modern full-stack Expense Tracker built with **React, Tailwind CSS, Node.js, and Express.js** featuring an interactive dashboard, analytics, smart filtering, and a clean SaaS-inspired user interface.
 
-A full-stack personal expense tracker, redesigned as a premium SaaS-style dashboard with dark mode, charts, CSV/PDF export, inline editing, and animated interactions — built on top of the original Express + fs + React assignment core.
+<p align="center">
 
----
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-38BDF8?style=for-the-badge&logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## 1. Project Overview
-
-ExpenseTracker Pro lets you log, filter, sort, edit, and analyze your personal spending. The backend is a small Express API that persists data to a JSON file (`data/expenses.json`) using Node's `fs` module — no database required. The frontend is a React (Vite) + Tailwind CSS dashboard that talks to that API.
-
-The original assignment requirements (MVC structure, middleware, REST endpoints, fs-based storage, React + Tailwind frontend) are all intact and untouched in spirit — this version adds a visual redesign and a set of bonus features on top.
-
----
-
-## 2. Features
-
-### Core Features (Original Assignment)
-- Add, view, edit, and delete expenses
-- Filter by category, search text, and amount range
-- Live statistics: total expenses, total amount, category breakdown
-- Custom logging, validation, and global error-handling middleware
-- MVC folder structure (routes / controllers / middleware / utils)
-- JSON file storage via the `fs` module — no MongoDB
-
-### Bonus Features (This Version)
-- ✅ **Edit Expense** — click the pencil icon to edit any expense in place using the same form
-- ✅ **Dark / Light Mode** — toggle in the header, preference saved in `localStorage`
-- ✅ **CSV Export** — `GET /api/expenses/export`, generated with the `fs` module and downloaded from the header
-- ✅ **PDF Export** — generated in the browser with `jsPDF` + `jspdf-autotable`
-- ✅ **Charts** — Pie chart (spending by category) and bar chart (spending by month) using Recharts
-- ✅ **Delete Confirmation Modal** — animated modal instead of the plain browser `confirm()`
-- ✅ **Toast Notifications** — success/error toasts via `react-toastify` for every add/update/delete/error
-- ✅ **Loading Skeletons** — pulsing placeholder cards while expenses are being fetched
-- ✅ **Empty State Illustration** — friendly message when there are no expenses to show
-- ✅ **Search Highlight** — matching search text is highlighted inside expense titles
-- ✅ **Sorting** — newest, oldest, highest amount, lowest amount, alphabetical
-- ✅ **Advanced Filters** — category, search, amount range, and **date range**, all combinable
-- ✅ **Premium Dashboard UI** — gradient header, animated stat cards, glassmorphism touches, Framer Motion animations throughout
+</p>
 
 ---
 
-## 3. Tech Stack
+## 🚀 Live Demo
 
-| Layer            | Technology                                      |
-|-------------------|--------------------------------------------------|
-| Backend runtime   | Node.js                                          |
-| Web framework     | Express.js                                       |
-| Data storage      | `fs` module → `expenses.json` (no database)      |
-| Frontend          | React (Vite)                                     |
-| Styling           | Tailwind CSS v3 (dark mode via the `class` strategy) |
-| Icons             | Lucide React                                     |
-| Animations        | Framer Motion                                    |
-| Charts            | Recharts                                         |
-| Toasts            | React Toastify                                   |
-| PDF generation    | jsPDF + jspdf-autotable                          |
+**Frontend:** https://your-vercel-link.vercel.app
+
+**Backend API:** https://your-render-link.onrender.com
 
 ---
 
-## 4. Folder Structure
+# 📖 Overview
 
-```
-YourName_Assignment2/
-├── README.md
+ExpenseTracker Pro is a modern full-stack web application designed to help users manage daily expenses efficiently. It provides real-time expense tracking, interactive analytics, powerful filtering, and data export features within a clean and responsive dashboard.
+
+---
+
+# ✨ Features
+
+| Module | Description |
+|----------|-------------|
+| 📊 Dashboard | Interactive dashboard with summary cards, financial overview, and spending insights |
+| 💰 Expense Management | Add, edit, delete, and organize expenses with category and date support |
+| 📈 Analytics | Monthly expense trends, category-wise statistics, highest, lowest, and average expenses |
+| 🔍 Smart Filters | Search by title, filter by category, amount range, date range, and sorting options |
+| 📁 Export | Export expenses to CSV and dashboard reports to PDF |
+| 🎨 User Experience | Responsive design, dark mode, toast notifications, smooth animations, and modern SaaS-inspired UI |
+| ⚙️ Backend | RESTful API, Express MVC architecture, middleware, validation, and JSON file storage |
+
+---
+
+# 🌟 Project Highlights
+
+- ✅ Full-Stack Expense Tracker
+- ✅ CRUD Operations
+- ✅ RESTful API Integration
+- ✅ MVC Architecture
+- ✅ Interactive Charts & Analytics
+- ✅ CSV Export
+- ✅ PDF Export
+- ✅ Smart Search & Filters
+- ✅ Responsive Design
+- ✅ Dark Mode Support
+- ✅ Modern SaaS Dashboard
+- ✅ Clean & Maintainable Code
+
+---
+
+# 🛠 Tech Stack
+
+| Frontend | Backend |
+|-----------|----------|
+| React.js | Node.js |
+| Vite | Express.js |
+| Tailwind CSS | REST API |
+| Axios | Middleware |
+| React Toastify | Validation |
+| Framer Motion | Error Handling |
+| Recharts | File System (JSON) |
+| Lucide React | dotenv & CORS |
+
+---
+
+# 📂 Project Structure
+
+```bash
+ExpenseTracker-Pro/
+│
+├── expensetracker-frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
 ├── expensetracker-backend/
-│   ├── server.js
-│   ├── .env
-│   ├── .gitignore
-│   ├── package.json
-│   ├── data/                       (expenses.json & expenses_export.csv auto-created here)
-│   ├── routes/
-│   │   └── expenseRoutes.js
 │   ├── controllers/
-│   │   └── expenseController.js
 │   ├── middleware/
-│   │   ├── logger.js
-│   │   ├── validate.js
-│   │   └── errorHandler.js
-│   └── utils/
-│       ├── fileHelper.js           (all fs logic lives here — reads/writes JSON + CSV)
-│       └── errorResponse.js        (reusable createError() helper for controllers)
-└── expensetracker-frontend/
-    ├── index.html
-    ├── package.json
-    ├── vite.config.js
-    ├── tailwind.config.js
-    ├── postcss.config.js
-    └── src/
-        ├── main.jsx
-        ├── App.jsx                 (all top-level state lives here)
-        ├── index.css
-        ├── api/
-        │   └── expenseApi.js       (every fetch call lives here)
-        ├── constants/
-        │   └── categories.js       (shared category icons/colors/labels + formatters)
-        ├── hooks/
-        │   └── useTheme.js         (dark/light mode + localStorage)
-        ├── utils/
-        │   └── exportPDF.js        (client-side PDF generation)
-        └── components/
-            ├── Header.jsx
-            ├── Hero.jsx
-            ├── StatsPanel.jsx
-            ├── ChartsSection.jsx
-            ├── ExpenseForm.jsx
-            ├── FilterBar.jsx
-            ├── ExpenseList.jsx
-            ├── ExpenseItem.jsx
-            ├── EmptyState.jsx
-            ├── SkeletonLoader.jsx
-            ├── ConfirmModal.jsx
-            └── Footer.jsx
+│   ├── routes/
+│   ├── utils/
+│   ├── data/
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
 ```
 
 ---
 
-## 5. Installation & Running
+# ⚙️ Installation
 
-### Backend
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/ExpenseTracker-Pro.git
+```
+
+```bash
+cd ExpenseTracker-Pro
+```
+
+---
+
+## 2. Backend Setup
 
 ```bash
 cd expensetracker-backend
+```
+
+Install dependencies
+
+```bash
 npm install
+```
+
+Run the backend
+
+```bash
 npm run dev
 ```
 
-- Runs on **http://localhost:3000**
-- Health check: `GET http://localhost:3000/api/health`
-- `expenses.json` is created automatically in `data/` the first time you add an expense.
+Server
 
-`.env`:
 ```
-PORT=3000
+http://localhost:3000
 ```
 
-### Frontend
+---
+
+## 3. Frontend Setup
 
 ```bash
 cd expensetracker-frontend
+```
+
+Install dependencies
+
+```bash
 npm install
+```
+
+Run the frontend
+
+```bash
 npm run dev
 ```
 
-- Runs on **http://localhost:5173**
-- Make sure the backend is running first, since the frontend calls `http://localhost:3000/api/expenses`.
+Application
+
+```
+http://localhost:5173
+```
 
 ---
 
-## 6. API Endpoints
+# 🔌 API Endpoints
 
-| Method | Endpoint                | Description                                              |
-|--------|--------------------------|------------------------------------------------------------|
-| GET    | `/api/expenses`          | Get all expenses. Supports `category`, `search`, `minAmount`, `maxAmount`, `dateFrom`, `dateTo` — all combinable |
-| GET    | `/api/expenses/stats`    | Spending summary: totals, average, by-category, by-month, highest/lowest |
-| GET    | `/api/expenses/export`   | Downloads all expenses as a `.csv` file (built with `fs`)  |
-| GET    | `/api/expenses/:id`      | Get a single expense                                       |
-| POST   | `/api/expenses`          | Create a new expense (validated: `title`, `amount`, `category`) |
-| PUT    | `/api/expenses/:id`      | Partially update an expense (`id`/`createdAt` can't change) |
-| DELETE | `/api/expenses/:id`      | Delete an expense                                           |
-
-> `stats` and `export` are both registered **before** `/:id` in the router — otherwise Express would treat `"stats"`/`"export"` as an `:id` value and the routes would never be reached.
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/health` | Health Check |
+| GET | `/api/expenses` | Retrieve all expenses |
+| GET | `/api/expenses/stats` | Expense statistics |
+| POST | `/api/expenses` | Create a new expense |
+| PUT | `/api/expenses/:id` | Update an expense |
+| DELETE | `/api/expenses/:id` | Delete an expense |
 
 ---
 
-## 7. Screenshots
+# 📸 Screenshots
 
-*(Add screenshots here before submission, e.g.:)*
+## 🏠 Dashboard
 
-`![Dashboard - Light Mode](./screenshots/dashboard-light.png)`
-`![Dashboard - Dark Mode](./screenshots/dashboard-dark.png)`
+<img width="894" height="590" alt="image" src="https://github.com/user-attachments/assets/72eb12cc-842d-4839-85a7-c8260eaf1b98" />
 
----
-
-## 8. Future Improvements
-
-- User authentication (multiple people, multiple expense sets)
-- Recurring expenses / budgets with alerts
-- Backend-driven pagination for very large expense lists
-- Deploy backend (Railway/Render) and frontend (Vercel/Netlify) for a live demo link
 
 ---
 
-## 9. Notes for Viva
+## 📊 Analytics
 
-- **fs isolation:** all file-system access (JSON read/write, CSV export) is in `utils/fileHelper.js` only — controllers never call `fs` directly.
-- **Error flow:** every controller catches its own errors and calls `next(err)`; `middleware/errorHandler.js` is the single place that formats error responses, using the `createError()` helper from `utils/errorResponse.js` for consistent messages/status codes.
-- **State ownership:** `App.jsx` is still the single source of truth for state (expenses, stats, filters, sort, editing expense, delete confirmation, error) — all components below it are presentational and receive data/handlers via props.
-- **Backward compatibility:** the stats endpoint gained new fields (`averageAmount`, `categoriesUsed`, `byMonth`) but kept every original field, so nothing that used the old shape breaks.
+<img width="1234" height="490" alt="image" src="https://github.com/user-attachments/assets/47734e0d-3d32-4af0-b894-10494dac3296" />
+
+
+---
+
+## 📱 Responsive Designs
+
+<img width="254" height="520" alt="image" src="https://github.com/user-attachments/assets/22e949a1-803a-4493-8e60-c7823030bb02" />
+
+---
+
+<img width="384" height="470" alt="image" src="https://github.com/user-attachments/assets/f46cecca-ae00-48e6-8417-c6101e994842" />
+
+---
+
+## 🔅 Dark Theme Toggle
+
+<img width="1351" height="638" alt="image" src="https://github.com/user-attachments/assets/50b09c56-10ab-4c38-9270-ab1ecdf8adaa" />
+
+
+
+# 🎯 Learning Outcomes
+
+This project demonstrates practical experience with:
+
+- React Component-Based Architecture
+- REST API Development
+- Express.js MVC Pattern
+- CRUD Operations
+- State Management
+- File-Based Data Storage
+- API Integration
+- Data Visualization
+- Responsive Web Design
+- Clean Code & Project Organization
+
+---
+
+# 🚀 Future Improvements
+
+- User Authentication
+- MongoDB Integration
+- User Accounts
+- Budget Planning
+- Expense Goals
+- Recurring Expenses
+- Cloud Synchronization
+- Email Reports
+
+---
+
+# 👨‍💻 Author
+
+**Hrum Kashif**
+
+**Frontend Developer | MERN Stack Learner | React Enthusiast**
+
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+
+Your support is always appreciated!
+
+---
