@@ -16,14 +16,6 @@
 
 ---
 
-## 🚀 Live Demo
-
-**Frontend:** https://hrum-kashif-assignment-1.vercel.app/
-
-**Backend API:** https://your-render-link.onrender.com
-
----
-
 # 📖 Overview
 
 ExpenseTracker Pro is a modern full-stack web application designed to help users manage daily expenses efficiently. It provides real-time expense tracking, interactive analytics, powerful filtering, and data export features within a clean and responsive dashboard.
