@@ -18,7 +18,7 @@
 
 ## 🚀 Live Demo
 
-**Frontend:** https://your-vercel-link.vercel.app
+**Frontend:** https://hrum-kashif-assignment-1.vercel.app/
 
 **Backend API:** https://your-render-link.onrender.com
 
