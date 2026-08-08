@@ -2,6 +2,8 @@
 
 require('dotenv').config();
 
+const connectDB = require('./config/db');
+
 const express = require('express');
 const cors = require('cors');
 
@@ -10,6 +12,9 @@ const errorHandler = require('./middleware/errorHandler');
 const expenseRoutes = require('./routes/expenseRoutes');
 
 const app = express();
+
+connectDB();
+
 
 // cors() must be registered before routes
 app.use(cors({ origin: 'http://localhost:5173' }));
